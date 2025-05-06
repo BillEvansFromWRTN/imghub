@@ -18,6 +18,7 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 20px;
+      font-size: 16px;
     }
 
     h1 {
@@ -64,9 +65,19 @@
       text-decoration: underline;
     }
 
+    /* 📱 모바일 최적화 */
     @media (max-width: 480px) {
+      body {
+        padding: 12px;
+        font-size: 15px;
+      }
+
       h1 {
         font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 10px;
       }
 
       .card a {
@@ -80,13 +91,13 @@
   <p>캐릭터를 선택하면 해당 이미지 갤러리로 이동합니다</p>
 
   <div class="gallery">
-    <div class="card"><a href="/imghub/hopeless/LU" target="_blank">루치아나 (LU)</a></div>
-    <div class="card"><a href="/imghub/hopeless/KI" target="_blank">키리사키 (KI)</a></div>
-    <div class="card"><a href="/imghub/hopeless/HI" target="_blank">하일 (HI)</a></div>
-    <div class="card"><a href="/imghub/hopeless/EL" target="_blank">엘리야 (EL)</a></div>
-    <div class="card"><a href="/imghub/hopeless/RA" target="_blank">라비아나 (RA)</a></div>
-    <div class="card"><a href="/imghub/hopeless/HO" target="_blank">하워드 (HO)</a></div>
-    <div class="card"><a href="/imghub/hopeless/CH" target="_blank">청화 (CH)</a></div>
+    <div class="card"><a href="/imghub/hopeless/LU">루치아나 (LU)</a></div>
+    <div class="card"><a href="/imghub/hopeless/KI">키리사키 (KI)</a></div>
+    <div class="card"><a href="/imghub/hopeless/HI">하일 (HI)</a></div>
+    <div class="card"><a href="/imghub/hopeless/EL">엘리야 (EL)</a></div>
+    <div class="card"><a href="/imghub/hopeless/RA">라비아나 (RA)</a></div>
+    <div class="card"><a href="/imghub/hopeless/HO">하워드 (HO)</a></div>
+    <div class="card"><a href="/imghub/hopeless/CH">청화 (CH)</a></div>
   </div>
 </body>
 </html>
