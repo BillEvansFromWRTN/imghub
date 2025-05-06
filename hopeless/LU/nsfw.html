@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NSFW 이미지 – 루치아나</title>
   <style>
     body {
@@ -10,6 +11,16 @@
       text-align: center;
       padding: 20px;
       font-family: sans-serif;
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #faa;
     }
 
     .gallery {
@@ -19,9 +30,57 @@
       margin-top: 30px;
     }
 
-    img {
+    .thumb img {
       width: 100%;
       border-radius: 8px;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .thumb img:hover {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px;
+        font-size: 15px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -30,20 +89,37 @@
   <p>🔞 아래 이미지는 성인 콘텐츠를 포함합니다.</p>
 
   <div class="gallery">
-    <img src="17.png" alt="NSFW 17">
-    <img src="18.png" alt="NSFW 18">
-    <img src="19.png" alt="NSFW 19">
-    <img src="20.png" alt="NSFW 20">
-    <img src="21.png" alt="NSFW 21">
-    <img src="22.png" alt="NSFW 22">
-    <img src="23.png" alt="NSFW 23">
-    <img src="24.png" alt="NSFW 24">
-    <img src="25.png" alt="NSFW 25">
-    <img src="26.png" alt="NSFW 26">
-    <img src="27.png" alt="NSFW 27">
-    <img src="28.png" alt="NSFW 28">
-    <img src="29.png" alt="NSFW 29">
-    <img src="30.png" alt="NSFW 30">
+    <!-- 썸네일 & 라이트박스 링크 연결 -->
+    <div class="thumb"><a href="#img17"><img src="17.png" alt="NSFW 17"></a></div>
+    <div class="thumb"><a href="#img18"><img src="18.png" alt="NSFW 18"></a></div>
+    <div class="thumb"><a href="#img19"><img src="19.png" alt="NSFW 19"></a></div>
+    <div class="thumb"><a href="#img20"><img src="20.png" alt="NSFW 20"></a></div>
+    <div class="thumb"><a href="#img21"><img src="21.png" alt="NSFW 21"></a></div>
+    <div class="thumb"><a href="#img22"><img src="22.png" alt="NSFW 22"></a></div>
+    <div class="thumb"><a href="#img23"><img src="23.png" alt="NSFW 23"></a></div>
+    <div class="thumb"><a href="#img24"><img src="24.png" alt="NSFW 24"></a></div>
+    <div class="thumb"><a href="#img25"><img src="25.png" alt="NSFW 25"></a></div>
+    <div class="thumb"><a href="#img26"><img src="26.png" alt="NSFW 26"></a></div>
+    <div class="thumb"><a href="#img27"><img src="27.png" alt="NSFW 27"></a></div>
+    <div class="thumb"><a href="#img28"><img src="28.png" alt="NSFW 28"></a></div>
+    <div class="thumb"><a href="#img29"><img src="29.png" alt="NSFW 29"></a></div>
+    <div class="thumb"><a href="#img30"><img src="30.png" alt="NSFW 30"></a></div>
   </div>
+
+  <!-- 라이트박스 확대 뷰 -->
+  <div id="img17" class="lightbox"><a href="#"><img src="17.png" alt="NSFW 17 large"></a></div>
+  <div id="img18" class="lightbox"><a href="#"><img src="18.png" alt="NSFW 18 large"></a></div>
+  <div id="img19" class="lightbox"><a href="#"><img src="19.png" alt="NSFW 19 large"></a></div>
+  <div id="img20" class="lightbox"><a href="#"><img src="20.png" alt="NSFW 20 large"></a></div>
+  <div id="img21" class="lightbox"><a href="#"><img src="21.png" alt="NSFW 21 large"></a></div>
+  <div id="img22" class="lightbox"><a href="#"><img src="22.png" alt="NSFW 22 large"></a></div>
+  <div id="img23" class="lightbox"><a href="#"><img src="23.png" alt="NSFW 23 large"></a></div>
+  <div id="img24" class="lightbox"><a href="#"><img src="24.png" alt="NSFW 24 large"></a></div>
+  <div id="img25" class="lightbox"><a href="#"><img src="25.png" alt="NSFW 25 large"></a></div>
+  <div id="img26" class="lightbox"><a href="#"><img src="26.png" alt="NSFW 26 large"></a></div>
+  <div id="img27" class="lightbox"><a href="#"><img src="27.png" alt="NSFW 27 large"></a></div>
+  <div id="img28" class="lightbox"><a href="#"><img src="28.png" alt="NSFW 28 large"></a></div>
+  <div id="img29" class="lightbox"><a href="#"><img src="29.png" alt="NSFW 29 large"></a></div>
+  <div id="img30" class="lightbox"><a href="#"><img src="30.png" alt="NSFW 30 large"></a></div>
 </body>
 </html>
