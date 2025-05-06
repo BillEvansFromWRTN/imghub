@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>루치아나 이미지</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #f8f8f8;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .thumb {
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+    }
+
+    .thumb img {
+      width: 100%;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .thumb img:hover {
+      transform: scale(1.05);
+    }
+
+    .nsfw-link {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .nsfw-link a {
+      color: #ff9aa2;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .nsfw-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>루치아나 이미지 (SFW)</h1>
+
+  <div class="gallery">
+    <!-- 00~16.jpg -->
+    <div class="thumb"><img src="00.jpg" alt="Image 00"></div>
+    <div class="thumb"><img src="01.jpg" alt="Image 01"></div>
+    <div class="thumb"><img src="02.jpg" alt="Image 02"></div>
+    <div class="thumb"><img src="03.jpg" alt="Image 03"></div>
+    <div class="thumb"><img src="04.jpg" alt="Image 04"></div>
+    <div class="thumb"><img src="05.jpg" alt="Image 05"></div>
+    <div class="thumb"><img src="06.jpg" alt="Image 06"></div>
+    <div class="thumb"><img src="07.jpg" alt="Image 07"></div>
+    <div class="thumb"><img src="08.jpg" alt="Image 08"></div>
+    <div class="thumb"><img src="09.jpg" alt="Image 09"></div>
+    <div class="thumb"><img src="10.jpg" alt="Image 10"></div>
+    <div class="thumb"><img src="11.jpg" alt="Image 11"></div>
+    <div class="thumb"><img src="12.jpg" alt="Image 12"></div>
+    <div class="thumb"><img src="13.jpg" alt="Image 13"></div>
+    <div class="thumb"><img src="14.jpg" alt="Image 14"></div>
+    <div class="thumb"><img src="15.jpg" alt="Image 15"></div>
+    <div class="thumb"><img src="16.jpg" alt="Image 16"></div>
+  </div>
+
+  <div class="nsfw-link">
+    🔞 <a href="nsfw.html" target="_blank">NSFW 이미지(17~31번) 보기</a>
+  </div>
+</body>
+</html>
