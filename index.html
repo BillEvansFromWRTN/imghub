@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Character Image Hub</title>
   <style>
+    :root {
+      --bg: #121212;
+      --card-bg: #1e1e1e;
+      --text: #f0f0f0;
+      --accent: #a5d6ff;
+    }
+
     body {
-      background-color: #121212;
-      color: #f0f0f0;
+      background-color: var(--bg);
+      color: var(--text);
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 20px;
@@ -14,22 +22,30 @@
 
     h1 {
       text-align: center;
-      color: #ffffff;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+      color: #ccc;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
     }
 
     .card {
-      background: #1e1e1e;
+      background: var(--card-bg);
       border-radius: 10px;
       padding: 15px;
       text-align: center;
       transition: background 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .card:hover {
@@ -38,42 +54,39 @@
 
     .card a {
       text-decoration: none;
-      color: #a5d6ff;
+      color: var(--accent);
       font-weight: bold;
+      font-size: 1rem;
       display: block;
     }
 
     .card a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .card a {
+        font-size: 0.95rem;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>캐릭터 이미지 허브</h1>
-  <p style="text-align:center;">캐릭터를 선택하면 해당 이미지 디렉터리로 이동합니다.</p>
+  <p>캐릭터를 선택하면 해당 이미지 갤러리로 이동합니다</p>
 
   <div class="gallery">
-    <div class="card">
-      <a href="/imghub/hopeless/LU/index.html" target="_blank">루치아나 (LU)</a>
-    </div>
-    <div class="card">
-      <a href="/imghub/hopeless/KI" target="_blank">키리사키 (KI)</a>
-    </div>
-    <div class="card">
-      <a href="/imghub/hopeless/HI" target="_blank">하일 (HI)</a>
-    </div>
-    <div class="card">
-      <a href="/imghub/hopeless/EL" target="_blank">엘리야 (EL)</a>
-    </div>
-    <div class="card">
-      <a href="/imghub/hopeless/RA" target="_blank">라비아나 (RA)</a>
-    </div>
-    <div class="card">
-      <a href="/imghub/hopeless/HO" target="_blank">하워드 (HO)</a>
-    </div>
-    <div class="card">
-      <a href="/imghub/hopeless/CH" target="_blank">청화 (CH)</a>
-    </div>
+    <div class="card"><a href="/imghub/hopeless/LU" target="_blank">루치아나 (LU)</a></div>
+    <div class="card"><a href="/imghub/hopeless/KI" target="_blank">키리사키 (KI)</a></div>
+    <div class="card"><a href="/imghub/hopeless/HI" target="_blank">하일 (HI)</a></div>
+    <div class="card"><a href="/imghub/hopeless/EL" target="_blank">엘리야 (EL)</a></div>
+    <div class="card"><a href="/imghub/hopeless/RA" target="_blank">라비아나 (RA)</a></div>
+    <div class="card"><a href="/imghub/hopeless/HO" target="_blank">하워드 (HO)</a></div>
+    <div class="card"><a href="/imghub/hopeless/CH" target="_blank">청화 (CH)</a></div>
   </div>
 </body>
 </html>
